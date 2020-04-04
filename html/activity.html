@@ -57,7 +57,7 @@
 				metric_data += '<td>' + value.workout_type + '</td>';
 				metric_data += '<td>'	+ value.length_workout + '</td>';
 				metric_data += '<td>' + value.hours_slept + '</td>';
-				metric_data += "<td>" + "<button type='button' value = 'X' >" + "</button>"+ "</td>";
+				metric_data += "<td>" + "<button type='button' value ='X' >" +"X" + "</button>"+ "</td>";
 				metric_data += '</tr>';
 		
 		});
@@ -95,49 +95,35 @@
 
 
 		<!--Sanfords code-->
-      <div class = "row" >
-		<main id="chart-container" class = "eight columns" style="margin-top: 2%">
+		<div class="nine.columns">
+		<!-- <main class = "container" style="margin-top: 2%"> -->
             <!--<div id="chart-container" class = "eight columns" style="margin-top: 1%">-->
 
+   <!-- <div class = "seven columns"> -->
 
+			<table id = "metrics-table" class = "container" >
+					<!-- style="width:90%"> -->
+					<thead>
+							<tr >
+									<th>Entrance</th>
+									<th>Weight</th>
+									<th>Calories Intake</th>
+									<th>Calories Burned</th>
+									<th>Workout Type</th>
+									<!-- <th>Activity Level</th> -->
+									<th>Time working out</th>
+									<th>Hours of sleep</th>
+									<th> Action </th>
+								</tr>
+		
+					</thead>				
+						</table>
+
+	 <!-- </div> -->
 			
-			<table id = "metrics-table" style="width:90%">
-				<tr>
-					<th>Entrance</th>
-				  <th>Weight</th>
-				  <th>Calories Intake</th>
-				  <th>Calories Burned</th>
-					<th>Workout Type</th>
-				  <!-- <th>Activity Level</th> -->
-				  <th>Time working out</th>
-					<th>Hours of sleep</th>
-					<th> Action </th>
-				</tr>
-				<!-- <tr>
-				  <td>Jill</td>
-				  <td>Smith</td>
-				  <td>50</td>
-				</tr>
-				<tr>
-				  <td>Eve</td>
-				  <td>Jackson</td>
-				  <td>94</td>
-				</tr> -->
-				</table>
-				
-				
+			
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-			<!--ended chart-->
-			<!--Your lists of entered daily activitites -->
-			<!-- <ul class = "eight columns">
-				<li>Coffeefjsdaklf;dsfjlsd;ureaofsdjzlsfaadsfasdfsdafdf   </li>
-				<li>Teafdsafdsdsfdfdddddd      </li>
-				<li>Milkfjsdaklf;dsfjlsd;ureaofsdjzlsfaadsfasdfsdafdf</li>
-			  </ul>
-			   -->
-
-		</main>
+		<!-- </main> -->
 
 		<!-- <div class = "four columns" style="margin-top: 2%">
 			<img src="images/runner.jpg" alt="client photo" class = "twelve columns" >
