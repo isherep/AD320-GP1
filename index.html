@@ -27,12 +27,16 @@
 	<!-- FAVICON
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<link rel="icon" type="image/png" href="images/favicon.png">
+    
+   
+    
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 </head>
 <body>
 	<div class="container">
     	<header class = "eleven columns" style="margin-top: 1%">
-	        <a href="login.html" ><img src="images/logo.png" alt="logo"></a>
+	        <a href="html/login.html" ><img src="images/logo.png" alt="logo"></a>
 			<a href="https://www.facebook.com/" target = "_blank"><img src="images/facebook.png" alt="Facebook"></a>
 			<a href="https://twitter.com/"><img src="images/twitter.png" alt="Twitter"></a>
 			<a href="https://www.instagram.com/" target = "_blank"><img src="images/instagram.png" alt="Instagram"></a>
@@ -41,10 +45,10 @@
             <label for="show-menu" class="show-menu">MENU</label>
             <input type="checkbox" id="show-menu" role="button">
             <ul id="menu" class = "test">
-				<li><a href="login.html">LOGIN</a></li>
+				<li><a href="./html/login.html">LOGIN</a></li>
                 <li><a href="index.html">INDEX</a></li>
-                <li><a href="activity.html">ACTIVITY</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="./html/activity.html">ACTIVITY</a></li>
+                <!-- <li><a href="./html/contact.html">CONTACT</a></li> -->
             </ul>
         </nav> <!--end of nav-->
 
@@ -71,8 +75,8 @@
       <div class="row"> <!--second row-->
       <div class="eight columns" style="margin-top: 5%">
         <h4>Daily Activity Update Form</h4>
-          <!--Input info form--->
-    <form action="php/index.php" method="post">
+          <!--Input info form-->
+    <form action="https://4x21cafvig.execute-api.us-west-2.amazonaws.com/default/myPostRequest" method="post" >
 
     <label for="exampleEmailInput">Today's weight (lbs): </label>
       <input class="u-full-width" type="number" placeholder="for example: 130" id="exampleWeightInput" name = "weight">
@@ -86,11 +90,11 @@
       <input class="u-full-width" type="number" placeholder="for example: 500" id="calUse" name = "calBurned">
 
   <label for="exampleRecipientInput"> Workout type today: </label>
-      <input class="u-full-width" type="text" placeholder="for example: running" id="workoutInput" name = "workout_type">
+      <input class="u-full-width" type="text" placeholder="for example: running" id="workoutInput" name = "workoutType">
 
-    <label for="exampleRecipientInput"> Activity level: </label>
+    <label for="exampleRecipientInput" > Activity level: </label>
       <select class="u-full-width" id="activity_options">
-        <option value="Light">Light (HR 90 - 120 bpm) </option>
+        <option value="Light" >Light (HR 90 - 120 bpm) </option>
         <option value="Moderate">Moderate (HR 121 - 140 bpm)</option>
         <option value="Intense">Intense (HR 141 - 160 bpm)</option>
       </select>
@@ -107,7 +111,8 @@
               <label for="exampleRecipientInput"> Hours of sleep? </label>
       <input class="u-full-width" type="number" placeholder="for example: 8" id="sleepInput" name = "sleep">
 
-  <input class="button-primary" type="submit" value="Submit">
+  <input class="button-primary" type="submit" formaction="https://4x21cafvig.execute-api.us-west-2.amazonaws.com/default/myPostRequest" 
+  formmethod = "post" value="Submit" > 
 </form>
 
       <!----------------------------------------------------->
@@ -119,7 +124,7 @@
           <p id = "output">
 
           </p>
-              <img src = "images/shadows.jpg" alt = "runners" class = "twelve columns">
+              <img src = "images/running-shadows.png" alt = "runners" class = "twelve columns">
         </div>
       </div>  <!--end second row-->
 
@@ -140,7 +145,7 @@
 	  </ul>
   </footer> <!--end of footer-->
      </div>
-    <script src= "js/script.js"> </script>
+<!--    <script src= "js/script.js"> </script>-->
 </body>
 
 </html>

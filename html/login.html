@@ -1,0 +1,82 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Remy Sharp Shim -->
+    <!--[if lte IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js" type="text/javascript" >
+    </script>
+    <![endif]-->
+
+	<!-- RESPONSIVENESS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- FONTS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+	<!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href="../css/normalize.css" type="text/css" rel="stylesheet">
+	<link href="../css/skeleton.css" type="text/css" rel="stylesheet">
+
+	<!-- FAVICON
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+	<div class="container">
+    	<header class = "eleven columns" style="margin-top: 1%">
+	        <a href="login.html" ><img src="../images/logo.png" alt="logo"></a>
+			<a href="https://www.facebook.com/" target = "_blank"><img src="../images/facebook.png" alt="Facebook"></a>
+			<a href="https://twitter.com/"><img src="../images/twitter.png" alt="Twitter"></a>
+			<a href="https://www.instagram.com/" target = "_blank"><img src="../images/instagram.png" alt="Instagram"></a>
+		</header>
+		<nav>
+            <label for="show-menu" class="show-menu">MENU</label>
+            <input type="checkbox" id="show-menu" role="button">
+            <ul id="menu" class = "test">
+				<li><a href="./login.html">LOGIN</a></li>
+                <li><a href="../index.html">INDEX</a></li>
+                <li><a href="./activity.html">ACTIVITY</a></li>
+                <!-- <li><a href="contact.html">CONTACT</a></li> -->
+            </ul>
+        </nav> <!--end of nav-->
+
+		<main> <!--started main container-->
+			<form action="login.php" method="post">
+				<h2>Sign In</h2>
+				<label for="exampleEmailInput">Username: </label><input class="u-full-width"
+				type="text" placeholder="username" id="exampleRecipientInput" name="name"><br>
+				<label for="exampleEmailInput">Password: </label><input class="u-full-width"
+				type="password" placeholder="password" id="exampleRecipientInput" name="password"><br>
+				<h2>New Account</h2>
+				<label for="exampleRecipientInput">Create Username: </label><input class="u-full-width"
+				type="text" placeholder="username" id="exampleRecipientInput" name="name"><br>
+				<label for="exampleRecipientInput">Email: </label><input class="u-full-width"
+				type="email" placeholder="email" id="exampleRecipientInput" name="email"><br>
+				<label for="exampleEmailInput">Create Password: </label><input class="u-full-width"
+				type="password" placeholder="password" id="exampleRecipientInput" name="password"><br>
+        		<label for="exampleEmailInput">Create Password: </label><input class="u-full-width"
+				type="password" placeholder="password" id="exampleRecipientInput" name="conf_password"><br>
+				 <input class="button-primary" type="submit" value="Log in/Create Account">
+			</form>
+
+		</main>
+		<footer>
+            <ul class = "test">
+                <li>Copyright 2019 &copy;</li>
+                <li><a href="privacy.html">Terms & Conditions</a></li>
+                <li>Designed by 4AwePro</li>
+            </ul>
+        </footer> <!--end of footer-->
+
+	</div> <!--End of wrapper-->
+<!--    <script src = "js/script1.js"></script>-->
+</body>
+</html>

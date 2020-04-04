@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - LTF</title> 
+
+    <!--Remy Sharp Shim -->
+    <!--[if lte IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js" type="text/javascript" >
+    </script>
+    <![endif]-->
+
+	<!-- RESPONSIVENESS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- FONTS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+	<!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href="../css/normalize.css" type="text/css" rel="stylesheet">
+	<link href="../css/skeleton.css" type="text/css" rel="stylesheet">
+
+	<!-- FAVICON
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="icon" type="image/png" href="../images/favicon.png">
+
+</head>
+<body>
+	<div class="container">
+    	<header class = "eleven columns" style="margin-top: 1%">
+	        <a href="login.html" ><img src="../images/logo.png" alt="logo"></a>
+			<a href="https://www.facebook.com/" target = "_blank"><img src="../images/facebook.png" alt="Facebook"></a>
+			<a href="https://twitter.com/"><img src="../images/twitter.png" alt="Twitter"></a>
+			<a href="https://www.instagram.com/" target = "_blank"><img src="../images/instagram.png" alt="Instagram"></a>
+		</header>
+		<nav>
+            <label for="show-menu" class="show-menu">MENU</label>
+            <input type="checkbox" id="show-menu" role="button">
+            <ul id="menu" class = "test">
+				<li><a href="login.html">LOGIN</a></li>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="activity.html">ACTIVITY</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav> <!--end of nav-->
+
+		<div class= "row">
+			<div class="ten columns">
+			<form action="php/contact.php" method='post'>
+
+				    <div class="six columns">
+				      <label for="exampleEmailInput">Your email</label>
+				      <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput" name = "email">
+				    </div>
+				    <div class="six columns">
+				      <label for="exampleRecipientInput">Reason for contacting</label>
+				      <select class="u-full-width" id="exampleRecipientInput" name = "reason">
+				        <option value="Option 1">Questions?</option>
+				        <option value="Option 2">Want us to contact you?</option>
+				        <option value="Option 3">Fitness options</option>
+				      </select>
+				    </div>
+				
+            
+				     <!-- <label for="exampleMessage">Message</label> -->
+				     <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage" name = "message"></textarea>
+				     <label class="example-send-yourself-copy">
+				     <input type="checkbox">
+				     <span class="label-body">Send a copy to yourself</span>
+				   </label>
+				  <input class="button-primary"  type="submit" value="Submit">
+				</form>
+			</div>
+        </div>
+
+
+		<footer>
+            <ul class = "test">
+                <li>Copyright 2019 &copy;</li>
+                <li><a href="privacy.html">Terms & Conditions</a></li>
+                <li>Designed by 4AwePro</li>
+            </ul>
+        </footer> <!--end of footer-->
+
+	</div> <!--End of wrapper-->
+    <script src = "../js/script1.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity - LTF</title> 
+
+    <!--Remy Sharp Shim -->
+    <!--[if lte IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js" type="text/javascript" >
+    </script>
+    <![endif]-->
+
+	<!-- RESPONSIVENESS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- FONTS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+	<!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link href="../css/normalize.css" type="text/css" rel="stylesheet">
+	<link href="../css/skeleton.css" type="text/css" rel="stylesheet">
+
+	<!-- FAVICON
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="icon" type="image/png" href="../images/favicon.png">
+
+
+	<script>
+
+			$(document).ready(function(){
+
+				fetch('https://4x21cafvig.execute-api.us-west-2.amazonaws.com/default/myResponseFunction'
+		, {
+		   method: "GET"
+		}
+    ).then((response) => {
+           return response.json();
+  })
+  .then((data) => {	
+
+		console.log(data);
+		var metric_data = "";
+
+		$.each(data, function(key, value){
+			metric_data += '<tr>';
+				metric_data += '<td>' + value.entry + '</td>';
+				metric_data += '<td>' + value.weight + '</td>';
+				metric_data += '<td>' + value.calorie_intake + '</td>';
+				metric_data += '<td>' + value.calories_burned + '</td>';
+				metric_data += '<td>' + value.workout_type + '</td>';
+				metric_data += '<td>'	+ value.length_workout + '</td>';
+				metric_data += '<td>' + value.hours_slept + '</td>';
+				metric_data += "<td>" + "<button type='button' value = 'X' >" + "</button>"+ "</td>";
+				metric_data += '</tr>';
+		
+		});
+
+		console.log("Metric data ", metric_data)
+		$('#metrics-table').append(metric_data);
+		
+  }).catch(function(err) {
+			console.log('Fetch problem: ' + err.message);
+			});
+			});			
+		// const metrics; 
+	</script>
+
+
+</head>
+<body>
+	<div class="container">
+    	<header class = "eleven columns" style="margin-top: 1%">
+	        <a href="login.html" ><img src="../images/logo.png" alt="logo"></a>
+			<a href="https://www.facebook.com/" target = "_blank"><img src="../images/facebook.png" alt="Facebook"></a>
+			<a href="https://twitter.com/"><img src="../images/twitter.png" alt="Twitter"></a>
+			<a href="https://www.instagram.com/" target = "_blank"><img src="../images/instagram.png" alt="Instagram"></a>
+		</header>
+		<nav>
+            <label for="show-menu" class="show-menu">MENU</label>
+            <input type="checkbox" id="show-menu" role="button">
+            <ul id="menu" class = "test">
+				<li><a href="login.html">LOGIN</a></li>
+                <li><a href="../index.html">INDEX</a></li>
+                <li><a href="activity.html">ACTIVITY</a></li>
+                <!-- <li><a href="contact.html">CONTACT</a></li> -->
+            </ul>
+        </nav> <!--end of nav-->
+
+
+		<!--Sanfords code-->
+      <div class = "row" >
+		<main id="chart-container" class = "eight columns" style="margin-top: 2%">
+            <!--<div id="chart-container" class = "eight columns" style="margin-top: 1%">-->
+
+
+			
+			<table id = "metrics-table" style="width:90%">
+				<tr>
+					<th>Entrance</th>
+				  <th>Weight</th>
+				  <th>Calories Intake</th>
+				  <th>Calories Burned</th>
+					<th>Workout Type</th>
+				  <!-- <th>Activity Level</th> -->
+				  <th>Time working out</th>
+					<th>Hours of sleep</th>
+					<th> Action </th>
+				</tr>
+				<!-- <tr>
+				  <td>Jill</td>
+				  <td>Smith</td>
+				  <td>50</td>
+				</tr>
+				<tr>
+				  <td>Eve</td>
+				  <td>Jackson</td>
+				  <td>94</td>
+				</tr> -->
+				</table>
+				
+				
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+			<!--ended chart-->
+			<!--Your lists of entered daily activitites -->
+			<!-- <ul class = "eight columns">
+				<li>Coffeefjsdaklf;dsfjlsd;ureaofsdjzlsfaadsfasdfsdafdf   </li>
+				<li>Teafdsafdsdsfdfdddddd      </li>
+				<li>Milkfjsdaklf;dsfjlsd;ureaofsdjzlsfaadsfasdfsdafdf</li>
+			  </ul>
+			   -->
+
+		</main>
+
+		<!-- <div class = "four columns" style="margin-top: 2%">
+			<img src="images/runner.jpg" alt="client photo" class = "twelve columns" >
+		</div>
+      </div><!--ended second row-->
+      <!-- <div class = "row"  style="margin-top: 3%">
+		<div class = "three columns" id ="bottom-left">
+			<p>This is a very healthy recipe that tastes yummy!</p>
+		</div> -->
+
+		<!-- <div class = "three columns" id ="bottom-center">
+			<img src="images/blueberry-spinach.jpg" alt="healthy food picture" class = "eleven columns">
+		</div> -->
+
+		<!-- <div class = "three columns" id ="bottom-right">
+			<p>Keep excercising!</p>
+			<p>Some inspiring quotes</p>
+		</div>
+      </div>ended second row -->
+
+
+
+
+      <!----------------------------------------------------->
+
+
+
+   <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <footer style = "margin-top: 3%">
+	  <ul class = "test">
+		  <li>Copyright 2019 &copy;</li>
+		  <li><a href="privacy.html">Terms & Conditions</a></li>
+		  <li>Designed by 4AwePro</li>
+	  </ul>
+  </footer> <!--end of footer-->
+     </div>
+</body>
+</html>
