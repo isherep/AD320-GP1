@@ -34,11 +34,12 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
   position: relative;
-  width: 90%;
+  width: 100%;
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: content-box;
+  
   /* border: 1px solid purple; */
 }
 .column,
@@ -85,10 +86,10 @@
   .seven.columns                  { width: 56.6666666667%;
   padding-left: 2%;}
   .eight.columns {
-     width: 65.3333333333%;
+     width: 64.3333333333%;
     
     /* padding-left: 1%; */
-    padding-right: 1%;  
+    padding-left: 2%;  
   }
   .nine.columns                   { width: 74.0%;
     }
@@ -583,11 +584,16 @@ there.
     box-sizing: content-box;
     }
 
+    .eight.columns {
+       width: 64.3333333333%; 
+      margin-left: 1%;
+      padding-left: 1%;
+      
+    }
     
-    /* #metrics-table{
-      box-sizing: content-box;
-    } */
-
+    .four.columns {
+      margin: 0 2% 0 1%;
+    }
 }
 
 
@@ -610,6 +616,17 @@ there.
     max-width: 17px;
     padding: 0 10px;
     box-sizing: content-box;
+    }
+
+    .eight.columns {
+      /* width: 90.3333333333%; */
+      margin-left: 2%;
+      padding-left: 1%;
+      padding-right: 1%;  
+    }
+    
+    .four.columns {
+      margin: 0 2% 0 2%;
     }
 
 }
