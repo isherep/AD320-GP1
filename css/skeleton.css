@@ -34,7 +34,7 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
   position: relative;
-  width: 100%;
+  width: 90%;
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
@@ -65,7 +65,7 @@
   } */
 
   .container {
-    width: 80%; }
+    width: 90%; }
   .column,
   .columns {
     margin-left: 4%; }
@@ -84,7 +84,8 @@
   .six.columns                    { width: 48%;            }
   .seven.columns                  { width: 56.6666666667%;}
   .eight.columns                  { width: 65.3333333333%;}
-  .nine.columns                   { width: 74.0%;          }
+  .nine.columns                   { width: 74.0%;
+          }
   .ten.columns                    { width: 82.6666666667%; }
   .eleven.columns                 { width: 100%; }
   .twelve.columns                 { width: 100%; margin-left: 0; }
@@ -586,7 +587,7 @@ there.
 
 
 @media (max-width: 800px) {
-  body{font-size: 1.23em;}
+  body{font-size: 1.20em;}
   th,
   td {
     padding: 3px 2% 12px 0%;
@@ -605,19 +606,17 @@ there.
     box-sizing: content-box;
     }
 
-    
-    /* #metrics-table{
-      box-sizing: content-box;
-    } */
-
 }
 
 
-@media (max-width: 600px) {
-  body{font-size: 1.2em;}
+@media (max-width: 550px) {
+  .container{
+    width: 90%;
+  }
+  body{font-size: 1.1em;}
   th,
   td {
-    padding: 3px 2% 12px 1%;
+    padding: 3px 2% 9px 1%;
     margin: 0 0% 0 2%;
     text-align: center;
     border-bottom: 1px solid #E1E1E1;
@@ -633,19 +632,13 @@ there.
     box-sizing: content-box;
     }
 
-   
-
-    /* #metrics-table{
-      box-sizing: content-box;
-    } */
-
 }
 
 @media (max-width: 400px) {
     body{font-size: 0.8em;}
     th,
     td {
-      padding: 3px 1% 10px 1%;
+      padding: 3px 1% 8px 1%;
       text-align: left;
       /* border: 2px solid red; */
       border-bottom: 1px solid #E1E1E1; }
