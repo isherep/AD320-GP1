@@ -38,23 +38,32 @@
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box; }
+  box-sizing: content-box;
+  /* border: 1px solid purple; */
+}
 .column,
 .columns {
   width: 100%;
   float: left;
-  box-sizing: border-box; 
+  box-sizing: content-box; 
 }
 
 /* For devices larger than 400px */
 @media (min-width: 400px) {
   .container {
-    width: 85%;
-    padding: 0; }
+    width: 100%;
+    padding: 0; 
+  }
+
+  
 }
 
 /* For devices larger than 550px */
 @media (min-width: 550px) {
+  /* body{
+    font-size: 1.0em;
+  } */
+
   .container {
     width: 80%; }
   .column,
@@ -73,9 +82,8 @@
   .four.columns                   { width: 30.6666666667%; }
   .five.columns                   { width: 39.3333333333%; }
   .six.columns                    { width: 48%;            }
-  .seven.columns                  { width: 56.6666666667%; }
-  .eight.columns                  { width: 65.3333333333%; 
-    float: leftk}
+  .seven.columns                  { width: 56.6666666667%;}
+  .eight.columns                  { width: 65.3333333333%;}
   .nine.columns                   { width: 74.0%;          }
   .ten.columns                    { width: 82.6666666667%; }
   .eleven.columns                 { width: 100%; }
@@ -191,7 +199,7 @@ input[type="button"] {
   padding: 0 30px;
   color: #555;
   text-align: center;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 600;
   line-height: 38px;
   letter-spacing: .1rem;
@@ -548,6 +556,114 @@ there.
 */
 
 
+@media (max-width: 1000px) {
+  body{font-size: 1.23em;}
+  th,
+  td {
+    padding: 3px 2% 12px 0%;
+   
+    text-align: center;
+    border-bottom: 1px solid #E1E1E1;
+    /* border: 1px solid pink;  */
+    box-sizing: content-box;  
+    }
+  
+    button,
+    input[type="button"] {
+
+    max-width: 17px;
+    padding: 0 10px;
+    box-sizing: content-box;
+    }
+
+    
+    /* #metrics-table{
+      box-sizing: content-box;
+    } */
+
+}
+
+
+
+@media (max-width: 800px) {
+  body{font-size: 1.23em;}
+  th,
+  td {
+    padding: 3px 2% 12px 0%;
+   
+    text-align: center;
+    border-bottom: 1px solid #E1E1E1;
+    /* border: 1px solid greenyellow;  */
+    box-sizing: content-box;  
+    }
+  
+    button,
+    input[type="button"] {
+
+    max-width: 17px;
+    padding: 0 10px;
+    box-sizing: content-box;
+    }
+
+    
+    /* #metrics-table{
+      box-sizing: content-box;
+    } */
+
+}
+
+
+@media (max-width: 600px) {
+  body{font-size: 1.2em;}
+  th,
+  td {
+    padding: 3px 2% 12px 1%;
+    margin: 0 0% 0 2%;
+    text-align: center;
+    border-bottom: 1px solid #E1E1E1;
+    /* border: 1px solid plum;  */
+    box-sizing: content-box;  
+    }
+  
+    button,
+    input[type="button"] {
+
+    max-width: 15px;
+    padding: 0 10px;
+    box-sizing: content-box;
+    }
+
+   
+
+    /* #metrics-table{
+      box-sizing: content-box;
+    } */
+
+}
+
+@media (max-width: 400px) {
+    body{font-size: 0.8em;}
+    th,
+    td {
+      padding: 3px 1% 10px 1%;
+      text-align: left;
+      /* border: 2px solid red; */
+      border-bottom: 1px solid #E1E1E1; }
+    th:first-child,
+    td:first-child {
+      padding-left: 0; }
+    th:last-child,
+    td:last-child {
+      padding-right: 0; }
+
+      button,
+      input[type="button"] {
+
+      max-width: 10px;
+      padding: 0 10px;
+      box-sizing: content-box;
+  
+}
 /* Larger than mobile */
 @media (min-width: 400px) {}
 
@@ -562,3 +678,6 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
+
+
+}
