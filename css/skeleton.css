@@ -34,11 +34,12 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
   position: relative;
-  width: 90%;
+  width: 100%;
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: content-box;
+  
   /* border: 1px solid purple; */
 }
 .column,
@@ -85,10 +86,10 @@
   .seven.columns                  { width: 56.6666666667%;
   padding-left: 2%;}
   .eight.columns {
-     width: 65.3333333333%;
+     width: 64.3333333333%;
     
     /* padding-left: 1%; */
-    padding-right: 1%;  
+    padding-left: 2%;  
   }
   .nine.columns                   { width: 74.0%;
     }
@@ -196,6 +197,10 @@ a:hover {
     
     
 } 
+
+.edit-delete-buttons{
+  font-size: 23px;
+}
 .button,
 button,
 input[type="submit"],
@@ -203,22 +208,25 @@ input[type="reset"],
 input[type="button"] {
   display: inline-block;
   height: 38px;
-  padding: 0 30px;
+  padding: 0 10px;
+  /* max-width: 30px; */
+  margin: 0 5px 0 10px;
   color: #555;
   text-align: center;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 600;
-  line-height: 38px;
+  line-height: 28px;
   letter-spacing: .1rem;
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-    
+  box-sizing: content-box;
   background-color: transparent;
   border-radius: 4px;
   border: 1px solid #bbb;
   cursor: pointer;
-  box-sizing: border-box; }
+  
+ }
 .button:hover,
 button:hover,
 input[type="submit"]:hover,
@@ -238,6 +246,7 @@ input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
   color: #FFF;
+  font-size: 16px;
   background-color: #33C3F0;
   border-color: #33C3F0; }
 .button.button-primary:hover,
@@ -251,9 +260,13 @@ input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
   color: #FFF;
+  width: 60px;
   background-color: #1EAEDB;
   border-color: #1EAEDB; }
 
+  i{
+    align-self: center;
+  }
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -451,8 +464,8 @@ nav {
 /*Create a horizontal list with spacing*/
 li {
 	display:inline-block;
-	float: right;
-    width: 33%;
+	/* float: right; */
+  width: 33%;
 }
 
 /*Style for menu links*/
@@ -576,18 +589,46 @@ there.
     }
   
     button,
-    input[type="button"] {
-
-    max-width: 17px;
-    padding: 0 10px;
+    input[type="button"], .edit-delete-buttons {
+      font-size: 12px;
+       max-width: 17px;
+       padding: 0 10px;
+    /* padding: 0 10px; */
     box-sizing: content-box;
+   
+    margin-right: 2px;
     }
 
+    .eight.columns {
+       width: 64.3333333333%; 
+      margin-left: 1%;
+      padding-left: 1%;
+      
+    }
     
-    /* #metrics-table{
-      box-sizing: content-box;
-    } */
+    .four.columns {
+      margin: 0 2% 0 1%;
+    }
 
+    .edit-delete-buttons{
+      font-size: 12px;
+      max-width: 17px;
+    padding: 0 10px;
+    box-sizing: content-box;
+      margin-right: 2px;
+    }
+
+    .button.button-primary,
+    button.button-primary,
+    input[type="submit"].button-primary,
+    input[type="reset"].button-primary,
+    input[type="button"].button-primary {
+      font-size: 9px;     
+      display: block;
+     
+      
+      
+    }
 }
 
 
@@ -605,11 +646,32 @@ there.
     }
   
     button,
-    input[type="button"] {
-
+    input[type="button"], .edit-delete-buttons {
+   font-size: 8px;
     max-width: 17px;
     padding: 0 10px;
     box-sizing: content-box;
+    }
+
+    .eight.columns {
+      /* width: 90.3333333333%; */
+      margin-left: 2%;
+      padding-left: 1%;
+      padding-right: 1%;  
+    }
+    
+    .four.columns {
+      margin: 0 2% 0 2%;
+    }
+    .button.button-primary,
+    button.button-primary,
+    input[type="submit"].button-primary,
+    input[type="reset"].button-primary,
+    input[type="button"].button-primary {
+      font-size: 7px;
+      padding: 0 2px;
+      
+      
     }
 
 }
@@ -632,11 +694,20 @@ there.
     }
   
     button,
-    input[type="button"] {
-
-    max-width: 15px;
+    input[type="button"], 
+    .edit-delete-buttons {
+      font-size: 7px;
+    max-width: 12px;
     padding: 0 10px;
     box-sizing: content-box;
+    }
+
+    .edit-delete-buttons{
+      font-size: 7px;
+      max-width: 12px;
+      padding: 0 10px;
+      box-sizing: content-box;
+      max-width: 10px;
     }
 
 
@@ -650,7 +721,16 @@ there.
 .four.columns {
   margin: 0 2% 0 2%;
 }
-   
+
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  font-size: 8px;
+  
+}
+
 
 }
 
@@ -670,9 +750,12 @@ there.
       padding-right: 0; }
 
       button,
-      input[type="button"] {
-
-      max-width: 10px;
+      input[type="button"],
+      .edit-delete-buttons {
+        font-size: 6px;
+        line-height: 10px;
+      
+      max-width: 7px;
       padding: 0 10px;
       box-sizing: content-box;
       }
@@ -684,6 +767,21 @@ there.
        padding-right: 1%;  
      }
 
+     .edit-delete-buttons{
+      font-size: 6px;
+      line-height: 10px;
+      max-width: 7px;
+      height: 10px;
+      padding: 0 10px;
+      box-sizing: content-box;
+    }
+
+    .button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  font-size: 7px;
   
 }
 /* Larger than mobile */
@@ -698,8 +796,4 @@ there.
 /* Larger than desktop */
 @media (min-width: 1000px) {}
 
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {}
 
-
-}

@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
-
+		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 		<script src="jquery-3.4.1.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activity - LTF</title> 
 
@@ -33,9 +34,7 @@
 	<link rel="icon" type="image/png" href="../images/favicon.png">
 
 	<script>
-
 			$(document).ready(function(){
-
 				fetch('https://4x21cafvig.execute-api.us-west-2.amazonaws.com/default/myResponseFunction'
 		, {
 		   method: "GET"
@@ -44,35 +43,78 @@
            return response.json();
   })
   .then((data) => {	
-
 		console.log(data);
 		var metric_data = "";
-
 		$.each(data, function(key, value){
+			
+			id = value.entry;
+			console.log("rowID ", id);
 			metric_data += '<tr>';
-				metric_data += '<td>' + value.entry + '</td>';
-				metric_data += '<td>' + value.weight + '</td>';
-				metric_data += '<td>' + value.calorie_intake + '</td>';
-				metric_data += '<td>' + value.calories_burned + '</td>';
-				metric_data += '<td>' + value.workout_type + '</td>';
-				metric_data += '<td>'	+ value.length_workout + '</td>';
-				metric_data += '<td>' + value.hours_slept + '</td>';
-				metric_data += "<td>" + "<button type='button' value ='X' >" +"X" + "</button>"+ "</td>";
-				metric_data += '</tr>';
+			metric_data += '<td>' + value.entry + '</td>';
+			metric_data += '<td>' + value.weight + '</td>';
+			metric_data += '<td>' + value.calorie_intake + '</td>';
+			metric_data += '<td>' + value.calories_burned + '</td>';
+			metric_data += '<td>' + value.workout_type + '</td>';
+			metric_data += '<td>' + value.length_workout + '</td>';
+			metric_data += '<td >' + value.hours_slept + '</td>';
+			metric_data += "<td style = 'width: 20%'>" + "<button class='edit-delete-buttons' type='button'   onclick = 'updateMetric( " + id + ")'>" +"<i class='fas fa-edit'></i>"+ "</button>" +"<button  class='edit-delete-buttons' type='button' onclick = 'deleteMetric( " + id + ")' >" +"<i class='fa fa-trash-o'></i>" + "</button>"+ "</td>";
+			metric_data += '</tr>';
 		
-		});
-
-		console.log("Metric data ", metric_data)
+		});		
 		$('#metrics-table').append(metric_data);
 		
   }).catch(function(err) {
 			console.log('Fetch problem: ' + err.message);
 			});
-			});			
-		// const metrics; 
+	});
+	
+	async function deleteMetric(id){
+			//window.location = window.location;
+			console.log("delete metric method id is ", id);
+			fetch('https://4x21cafvig.execute-api.us-west-2.amazonaws.com/default/myDeleteRequest' + "?id="+ id
+				, {
+				method: "DELETE",
+				mode: "cors",
+				Accept:"application/json",
+				headers: {
+					'Content-Type': 'application/json'
+					},
+				}
+			).then(function(){
+				console.log("Refresgibg table...")
+			//	$('#metrics-table').DataTable().ajax.reload();
+					window.location.reload();
+					$(document).ready(location.reload);
+				}
+				);
+}
+
+    function updateMetric(id){
+			//window.location = window.location;
+			console.log("Update metric method id is ", id);
+			fetch('------TODO----' + "?id="+ id
+				, {		
+				method: "PUT",
+				mode: "cors",
+				Accept:"application/json",
+				headers: {
+					'Content-Type': 'application/json'
+					},
+				}
+				//body: JSON.stringify(data)}
+			)//.then(response => response.json())
+			.then(function(){
+				console.log("Refresgibg table...")
+				$('#metrics-table').DataTable().ajax.reload();
+					window.location.reload();
+					$(document).ready(location.reload);
+				//return false;
+				}
+			);
+}
+
+		
 	</script>
-
-
 </head>
 <body>
 	<div class="container">
@@ -93,12 +135,10 @@
             </ul>
         </nav> <!--end of nav-->
 
-
 		<!--Sanfords code-->
 		<div class="nine.columns">
 		<!-- <main class = "container" style="margin-top: 2%"> -->
             <!--<div id="chart-container" class = "eight columns" style="margin-top: 1%">-->
-
    <!-- <div class = "seven columns"> -->
 
 			<table id = "metrics-table" class = "container" >
@@ -121,36 +161,6 @@
 
 	 <!-- </div> -->
 			
-			
-
-		<!-- </main> -->
-
-		<!-- <div class = "four columns" style="margin-top: 2%">
-			<img src="images/runner.jpg" alt="client photo" class = "twelve columns" >
-		</div>
-      </div><!--ended second row-->
-      <!-- <div class = "row"  style="margin-top: 3%">
-		<div class = "three columns" id ="bottom-left">
-			<p>This is a very healthy recipe that tastes yummy!</p>
-		</div> -->
-
-		<!-- <div class = "three columns" id ="bottom-center">
-			<img src="images/blueberry-spinach.jpg" alt="healthy food picture" class = "eleven columns">
-		</div> -->
-
-		<!-- <div class = "three columns" id ="bottom-right">
-			<p>Keep excercising!</p>
-			<p>Some inspiring quotes</p>
-		</div>
-      </div>ended second row -->
-
-
-
-
-      <!----------------------------------------------------->
-
-
-
    <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <footer style = "margin-top: 3%">
@@ -161,5 +171,36 @@
 	  </ul>
   </footer> <!--end of footer-->
      </div>
-</body>
+	</body>
+
+<script>
+
+// function deleteMetric(id){
+// 	window.location = window.location;
+// 	console.log("delete metric method id is ", id);
+// 	fetch('https://4x21cafvig.execute-api.us-west-2.amazonaws.com/default/myDeleteRequest' + "?id="+ id
+// 		, {		
+// 		   method: "DELETE",
+// 		   mode: "cors",
+// 		   Accept:"application/json",
+// 		   headers: {
+//               'Content-Type': 'application/json'
+// 			},
+// 		}
+// 		  //body: JSON.stringify(data)}
+// 	).then(function(){
+// 		    window.location.replace()
+// 		   return false;}
+// 		   );
+	
+// 	//then(setTimeout(function(){ 
+// 		// console.log("Setting timeout 10 sec ")
+// 		// location.reload(); }, 10000)
+// 	//);//.then(location.reload()).then(location.reload()); //- works but after second click
+// 	//.then($("#metrics-table").refresh());
+// 		//location.reload());
+// }
+
+</script>
+
 </html>
