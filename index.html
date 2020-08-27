@@ -1,151 +1,162 @@
 <!doctype html>
 <html lang="en">
-<head> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activity - LTF</title>
 
-    <!--Remy Sharp Shim -->
-    <!--[if lte IE 9]>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity - LTF</title>
+
+  <!--Remy Sharp Shim -->
+  <!--[if lte IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js" type="text/javascript" >
     </script>
     <![endif]-->
 
-	<!-- RESPONSIVENESS
+  <!-- RESPONSIVENESS
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- FONTS
+  <!-- FONTS
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
-	<!-- CSS
+  <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<link href="css/normalize.css" type="text/css" rel="stylesheet">
-	<link href="css/skeleton.css" type="text/css" rel="stylesheet">
+  <link href="css/normalize.css" type="text/css" rel="stylesheet">
+  <link href="css/skeleton.css" type="text/css" rel="stylesheet">
 
-	<!-- FAVICON
+  <!-- FAVICON
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<link rel="icon" type="image/png" href="images/favicon.png">
-    
-   
-    
-    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+
+
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 </head>
+
 <body>
-	<div class="container">
-    	<header class = "eleven columns" style="margin-top: 1%">
-	        <a href="html/login.html" ><img src="images/logo.png" alt="logo"></a>
-			<a href="https://www.facebook.com/" target = "_blank"><img src="images/facebook.png" alt="Facebook"></a>
-			<a href="https://twitter.com/"><img src="images/twitter.png" alt="Twitter"></a>
-			<a href="https://www.instagram.com/" target = "_blank"><img src="images/instagram.png" alt="Instagram"></a>
-		</header>
-		<nav>
-            <label for="show-menu" class="show-menu">MENU</label>
-            <input type="checkbox" id="show-menu" role="button">
-            <ul id="menu" class = "test">
-				<li><a href="./html/login.html">LOGIN</a></li>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="./html/activity.html">ACTIVITY</a></li>
-                <!-- <li><a href="./html/contact.html">CONTACT</a></li> -->
-            </ul>
-        </nav> <!--end of nav-->
+  <div class="container">
+    <header class="eleven columns" style="margin-top: 1%">
+      <a href="html/login.html"><img src="images/logo.png" alt="logo"></a>
+      <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="https://twitter.com/"><img src="images/twitter.png" alt="Twitter"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+    </header>
+    <nav>
+      <label for="show-menu" class="show-menu">MENU</label>
+      <input type="checkbox" id="show-menu" role="button">
+      <ul id="menu" class="test">
+        <li><a href="./html/login.html">LOGIN</a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="./html/activity.html">ACTIVITY</a></li>
+        <!-- <li><a href="./html/contact.html">CONTACT</a></li> -->
+      </ul>
+    </nav>
+    <!--end of nav-->
 
 
     <div class="row">
       <div class="eight columns" style="margin-top: 4%">
-        <h4 style="font-style: oblique; background: lightskyblue; padding-left:2%; border-radius: 7px">“It is health that is real wealth and not pieces of gold and silver.” <br/> Mahatma Gandhia</h4>
+        <h4 style="font-style: oblique; background:#C6E2F3; padding-left:2%; border-radius: 7px; line-height: 60px;">
+          “It
+          is health that is real wealth and not pieces of gold and silver.” <br /> Mahatma Gandhia</h4>
 
-          <!-- <p></p>
-          <ul>
-           <li>Active hrs/day:</li>
-          <li>Calories consumed/day:</li>
-          <li>Calories burned a day:</li>
-              </ul> -->
+      </div>
+      <!--ended activity summary-->
 
-      </div> <!--ended activity summary-->
+      <!--Client Phonto containter --------------------->
+      <div class="four columns" style="margin-top: 4%">
+        <img src="images/runner.jpg" alt="runner" class="twelve columns">
+      </div>
+      <!--End of Client Phonto containter --------------------->
+    </div>
+    <!--end first row-->
 
-        <!--Client Phonto containter --------------------->
-         <div class="four columns" style="margin-top: 4%">
-          <img src = "images/runner.jpg" alt = "runner" class = "twelve columns">
-        </div><!--End of Client Phonto containter --------------------->
-    </div> <!--end first row-->
-
-      <div class="row"> <!--second row-->
+    <div class="row">
+      <!--second row-->
       <div class="eight columns" style="margin-top: 5%">
         <h4>Daily Activity Update Form</h4>
-          <!--Input info form-->
-    <form action="https://4x21cafvig.execute-api.us-west-2.amazonaws.com/default/myPostRequest" method="post" >
+        <!--Input info form-->
+        <form action="https://4x21cafvig.execute-api.us-west-2.amazonaws.com/default/myPostRequest" method="post">
 
-    <label for="exampleEmailInput">Today's weight (lbs): </label>
-      <input class="u-full-width" type="number" placeholder="for example: 130" id="exampleWeightInput" name = "weight">
-
-
-      <label for="exampleEmailInput">Your Calorie Intake</label>
-      <input class="u-full-width" type="number" placeholder="for example: 1800" id="CalInput" name = "calIntake">
-
-      <label for="exampleRecipientInput"> Calories Burned: </label>
-      <input class="u-full-width" type="number" placeholder="for example: 500" id="calUse" name = "calBurned">
-
-  <label for="exampleRecipientInput"> Workout type today: </label>
-      <input class="u-full-width" type="text" placeholder="for example: running" id="workoutInput" name = "workoutType">
-
-    <label for="exampleRecipientInput" > Activity level: </label>
-      <select class="u-full-width" id="activity_options">
-        <option value="Light" >Light (HR 90 - 120 bpm) </option>
-        <option value="Moderate">Moderate (HR 121 - 140 bpm)</option>
-        <option value="Intense">Intense (HR 141 - 160 bpm)</option>
-      </select>
+          <label for="exampleEmailInput">Today's weight (lbs): </label>
+          <input class="u-full-width" type="number" placeholder="for example: 130" id="exampleWeightInput"
+            name="weight">
 
 
-    <label for="exampleRecipientInput"> Time working out: </label>
-         <input class="u-full-width" type="text" placeholder="for example: 60" id="timeInput" name = "time">
-    <select class="u-full-width" id="exampleRecipientInput">
-        <option value="Option 1">Min</option>
-        <option value="Option 2">Hours</option>
+          <label for="exampleEmailInput">Your Calorie Intake</label>
+          <input class="u-full-width" type="number" placeholder="for example: 1800" id="CalInput" name="calIntake">
 
-      </select>
+          <label for="exampleRecipientInput"> Calories Burned: </label>
+          <input class="u-full-width" type="number" placeholder="for example: 500" id="calUse" name="calBurned">
 
-              <label for="exampleRecipientInput"> Hours of sleep? </label>
-      <input class="u-full-width" type="number" placeholder="for example: 8" id="sleepInput" name = "sleep">
+          <label for="exampleRecipientInput"> Workout type today: </label>
+          <input class="u-full-width" type="text" placeholder="for example: running" id="workoutInput"
+            name="workoutType">
 
-  <input class="button-primary" type="submit" formaction="https://4x21cafvig.execute-api.us-west-2.amazonaws.com/default/myPostRequest" 
-  formmethod = "post" value="Submit" > 
-</form>
+          <label for="exampleRecipientInput"> Activity level: </label>
+          <select class="u-full-width" id="activity_options">
+            <option value="Light">Light (HR 90 - 120 bpm) </option>
+            <option value="Moderate">Moderate (HR 121 - 140 bpm)</option>
+            <option value="Intense">Intense (HR 141 - 160 bpm)</option>
+          </select>
 
-      <!----------------------------------------------------->
-  </div><!--ended column-->
 
-          <div class="four columns" style="margin-top: 5%">
-        <h5>You daily activity will show here</h5>
+          <label for="exampleRecipientInput"> Time working out: </label>
+          <input class="u-full-width" type="text" placeholder="for example: 60" id="timeInput" name="time">
+          <select class="u-full-width" id="exampleRecipientInput">
+            <option value="Option 1">Min</option>
+            <option value="Option 2">Hours</option>
 
-          <p id = "output">
+          </select>
 
-          </p>
-              <img src = "images/running-shadows.png" alt = "runners" class = "twelve columns">
-        </div>
-      </div>  <!--end second row-->
+          <label for="exampleRecipientInput"> Hours of sleep? </label>
+          <input class="u-full-width" type="number" placeholder="for example: 8" id="sleepInput" name="sleep">
+
+          <input class="button-primary" type="submit"
+            formaction="https://4x21cafvig.execute-api.us-west-2.amazonaws.com/default/myPostRequest" formmethod="post"
+            value="Submit">
+        </form>
+
+        <!----------------------------------------------------->
+      </div>
+      <!--ended column-->
+
+      <div class="four columns" style="margin-top: 5%">
+        <h5>
+          <!-- You daily activity will show here -->
+        </h5>
+
+        <p id="output">
+
+        </p>
+        <img src="images/running-shadows.png" alt="runners" class="twelve columns">
+      </div>
+    </div>
+    <!--end second row-->
 
 
     <!------------------------------------------------------->
-    <div> <!-- started third row-->
+    <div>
+      <!-- started third row-->
 
 
-      </div> <!--started third row-->
+    </div>
+    <!--started third row-->
 
-   <!-- End Document
+    <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <footer style = "margin-top: 3%">
-	  <ul class = "test">
-		  <li>Copyright 2019 &copy;</li>
-		  <li><a href="privacy.html">Terms & Conditions</a></li>
-		  <li>Designed by 4AwePro</li>
-	  </ul>
-  </footer> <!--end of footer-->
-     </div>
-<!--    <script src= "js/script.js"> </script>-->
+    <footer style="margin-top: 3%">
+      <ul class="test">
+        <li>Copyright 2019 &copy;</li>
+        <li><a href="privacy.html">Terms & Conditions</a></li>
+        <li>Designed by 4AwePro</li>
+      </ul>
+    </footer>
+    <!--end of footer-->
+  </div>
+  <!--    <script src= "js/script.js"> </script>-->
 </body>
 
 </html>
-© 2019 GitHub, Inc.

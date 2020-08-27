@@ -16,7 +16,11 @@ INSERT INTO CUSTOMER_METRICS(
 	120, 1000, 150, 'running', 15, 12);
      
 INSERT INTO CUSTOMER_METRICS VALUES (
-default, 99, 1000, 150, 'running', 15, 12);
+default, 150, 2050, 150, 'running', 15, 8);
+INSERT INTO CUSTOMER_METRICS VALUES (
+default, 99, 1700, 150, 'cycling', 15, 7);
+INSERT INTO CUSTOMER_METRICS VALUES (
+default, 99, 1500, 150, 'walking', 15, 12);
 
      
 INSERT INTO CUSTOMER_METRICS (
