@@ -1,162 +1,222 @@
-<!doctype html>
-<html lang="en">
+    <!doctype html>
+    <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Activity - LTF</title>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Activity - LTF</title>
 
-  <!--Remy Sharp Shim -->
-  <!--[if lte IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js" type="text/javascript" >
-    </script>
-    <![endif]-->
+      <!--Remy Sharp Shim -->
+      <!--[if lte IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js" type="text/javascript" >
+        </script>
+        <![endif]-->
 
-  <!-- RESPONSIVENESS
-	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- RESPONSIVENESS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- FONTS
-	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+      <!-- FONTS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
-  <!-- CSS
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="css/normalize.css" type="text/css" rel="stylesheet">
-  <link href="css/skeleton.css" type="text/css" rel="stylesheet">
+      <!-- CSS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <link href="css/normalize.css" type="text/css" rel="stylesheet">
+      <link href="css/skeleton.css" type="text/css" rel="stylesheet">
 
-  <!-- FAVICON
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+      <!-- FAVICON
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <link rel="icon" type="image/png" href="images/favicon.png">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+      <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        
+        <!-- DATA VALIDATION ---------->
+        <script>          
+            $(document).ready(function () {                
+              var valid = true;
+                $("input[name='weight']").focusout(function() {
+                    var Weight = /^[0-9]*$/; 
+                  
+                    console.log($("input[name='weight']").val());
+                  if (!Weight.test($("input[name='weight']").val()) || $("input[name='weight']").val() === false ||
+                  $("input[name='weight']").val() === undefined || $("input[name='weight']").val() === "") {
+                             alert ("Please enter a whole number in the weight field");
+                }
+            });
+           
+            
+              $("input[name='calIntake']").focusout(function() {
+                var CalsIn = /^[0-9]*$/;
+                if (!CalsIn.test($("input[name='calIntake']").val()) ||
+                    $("input[name='calIntake']").val() === undefined ||
+                   $("input[name='calIntake']").val() === "") {
+                             alert ("Please enter a whole number in the calories field");
+                }
+              });
+            
+             $("input[name='calBurned']").focusout(function() {
+                var CalsBurn = /^[0-9]*$/;
+                if (!CalsBurn.test($("input[name='calBurned']").val()) ||
+                    $("input[name='calBurned']").val() === undefined ||
+                    $("input[name='calBurned']").val() === "" ) {
+                             alert ("Please enter a whole number in the calories field");
+                      //  $("input[name='calBurned']").background= 'red';  
+                   // return;
+                }
+              });
+                
+            $("input[name='workoutType']").focusout(function() {
+                var WorkType = /^[A-Za-z]*$/;
+                if (!WorkType.test($("input[name='workoutType']").val()) ||
+                    $("input[name='workoutType']").val() === undefined ||
+                    $("input[name='workoutType']").val() === "") {
+                             alert ("Sorry, but workout type can contain only letters");
+                }
+              });
+                
+                 $("input[name='sleep']").focusout(function() {
+             var CalsBurn = /^[0-9]*$/;
+                if (!CalsBurn.test($("input[name='sleep']").val()) ||
+                    $("input[name='sleep']").val() === undefined ||
+                    $("input[name='sleep']").val() === "") {
+                             alert ("Please enter a whole number hours slept field");
+                }
+              });
+                
+        });// END OF USER DATA VALIDATION
+            
+        </script>
+     <!-- END OF DATA VALIDATION ---------->
+
+    </head>
 
 
-
-  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-
-</head>
-
-<body>
-  <div class="container">
-    <header class="eleven columns" style="margin-top: 1%">
-      <a href="html/login.html"><img src="images/logo.png" alt="logo"></a>
-      <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
-      <a href="https://twitter.com/"><img src="images/twitter.png" alt="Twitter"></a>
-      <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
-    </header>
-    <nav>
-      <label for="show-menu" class="show-menu">MENU</label>
-      <input type="checkbox" id="show-menu" role="button">
-      <ul id="menu" class="test">
-        <li><a href="./html/login.html">LOGIN</a></li>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="./html/activity.html">ACTIVITY</a></li>
-        <!-- <li><a href="./html/contact.html">CONTACT</a></li> -->
-      </ul>
-    </nav>
-    <!--end of nav-->
+    <body>
+      <div class="container">
+        <header class="eleven columns" style="margin-top: 1%">
+          <a href="html/login.html"><img src="images/logo.png" alt="logo"></a>
+          <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+          <a href="https://twitter.com/"><img src="images/twitter.png" alt="Twitter"></a>
+          <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+        </header>
+        <nav>
+          <label for="show-menu" class="show-menu">MENU</label>
+          <input type="checkbox" id="show-menu" role="button">
+          <ul id="menu" class="test">
+            <li><a href="./html/login.html">LOGIN</a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="./html/activity.html">ACTIVITY</a></li>
+            <!-- <li><a href="./html/contact.html">CONTACT</a></li> -->
+          </ul>
+        </nav>
+        <!--end of nav-->
 
 
-    <div class="row">
-      <div class="eight columns" style="margin-top: 4%">
-        <h4 style="font-style: oblique; background:#C6E2F3; padding-left:2%; border-radius: 7px; line-height: 60px;">
-          “It
-          is health that is real wealth and not pieces of gold and silver.” <br /> Mahatma Gandhia</h4>
+        <div class="row">
+          <div class="eight columns" style="margin-top: 4%">
+            <h4 style="font-style: oblique; background:#C6E2F3; padding-left:2%; border-radius: 7px; line-height: 60px;">
+              “It
+              is health that is real wealth and not pieces of gold and silver.” <br /> Mahatma Gandhia</h4>
 
+          </div>
+          <!--ended activity summary-->
+
+          <!--Client Phonto containter --------------------->
+          <div class="four columns" style="margin-top: 4%">
+            <img src="images/runner.jpg" alt="runner" class="twelve columns">
+          </div>
+          <!--End of Client Phonto containter --------------------->
+        </div>
+        <!--end first row-->
+
+        <div class="row">
+          <!--second row-->
+          <div class="eight columns" style="margin-top: 5%">
+            <h4>Daily Activity Update Form</h4>
+            <!--Input info form-->
+            <form action="https://4x21cafvig.execute-api.us-west-2.amazonaws.com/default/myPostRequest" method="post">
+                
+
+              <label for="exampleWeightInput">Today's weight (lbs): </label>
+              <input class="u-full-width" name="weight" type="number" placeholder="for example: 130" id="exampleWeightInput"
+                >
+
+
+              <label for="exampleCalInput">Your Calorie Intake</label>
+              <input class="u-full-width" type="number" placeholder="for example: 1800" id="CalInput" name="calIntake">
+
+              <label for="exampleRecipientInput"> Calories Burned: </label>
+              <input class="u-full-width" type="number" placeholder="for example: 500" id="calUse" name="calBurned">
+
+              <label for="exampleRecipientInput"> Workout type today: </label>
+              <input class="u-full-width" type="text" placeholder="for example: running" id="workoutInput"
+                name="workoutType">
+
+              <label for="exampleRecipientInput"> Activity level: </label>
+              <select class="u-full-width" id="activity_options">
+                <option value="Light">Light (HR 90 - 120 bpm) </option>
+                <option value="Moderate">Moderate (HR 121 - 140 bpm)</option>
+                <option value="Intense">Intense (HR 141 - 160 bpm)</option>
+              </select>
+
+
+              <label for="exampleRecipientInput"> Time working out: </label>
+              <input class="u-full-width" type="number" placeholder="for example: 60" id="timeInput" name="time">
+              <select class="u-full-width" id="exampleRecipientInput">
+                <option value="Option 1">Min</option>
+                <option value="Option 2">Hours</option>
+
+              </select>
+
+              <label for="exampleRecipientInput"> Hours of sleep? </label>
+              <input class="u-full-width" type="number" placeholder="for example: 8" id="sleepInput" name="sleep">
+
+              <input class="button-primary" type="submit"
+                formaction="https://4x21cafvig.execute-api.us-west-2.amazonaws.com/default/myPostRequest" formmethod="post"
+                value="Submit">
+            </form>
+
+            <!----------------------------------------------------->
+          </div>
+          <!--ended column-->
+
+          <div class="four columns" style="margin-top: 5%">
+            <h5>
+              <!-- You daily activity will show here -->
+            </h5>
+
+            <p id="output">
+
+            </p>
+            <img src="images/running-shadows.png" alt="runners" class="twelve columns">
+          </div>
+        </div>
+        <!--end second row-->
+
+
+        <!------------------------------------------------------->
+        <div>
+          <!-- started third row-->
+
+
+        </div>
+        <!--started third row-->
+
+        <!-- End Document
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <footer style="margin-top: 3%">
+          <ul class="test">
+            <li>Copyright 2019 &copy;</li>
+            <li><a href="privacy.html">Terms & Conditions</a></li>
+            <li>Designed by 4AwePro</li>
+          </ul>
+        </footer>
+        <!--end of footer-->
       </div>
-      <!--ended activity summary-->
+      <!--    <script src= "js/script.js"> </script>-->
+    </body>
 
-      <!--Client Phonto containter --------------------->
-      <div class="four columns" style="margin-top: 4%">
-        <img src="images/runner.jpg" alt="runner" class="twelve columns">
-      </div>
-      <!--End of Client Phonto containter --------------------->
-    </div>
-    <!--end first row-->
-
-    <div class="row">
-      <!--second row-->
-      <div class="eight columns" style="margin-top: 5%">
-        <h4>Daily Activity Update Form</h4>
-        <!--Input info form-->
-        <form action="https://4x21cafvig.execute-api.us-west-2.amazonaws.com/default/myPostRequest" method="post">
-
-          <label for="exampleEmailInput">Today's weight (lbs): </label>
-          <input class="u-full-width" type="number" placeholder="for example: 130" id="exampleWeightInput"
-            name="weight">
-
-
-          <label for="exampleEmailInput">Your Calorie Intake</label>
-          <input class="u-full-width" type="number" placeholder="for example: 1800" id="CalInput" name="calIntake">
-
-          <label for="exampleRecipientInput"> Calories Burned: </label>
-          <input class="u-full-width" type="number" placeholder="for example: 500" id="calUse" name="calBurned">
-
-          <label for="exampleRecipientInput"> Workout type today: </label>
-          <input class="u-full-width" type="text" placeholder="for example: running" id="workoutInput"
-            name="workoutType">
-
-          <label for="exampleRecipientInput"> Activity level: </label>
-          <select class="u-full-width" id="activity_options">
-            <option value="Light">Light (HR 90 - 120 bpm) </option>
-            <option value="Moderate">Moderate (HR 121 - 140 bpm)</option>
-            <option value="Intense">Intense (HR 141 - 160 bpm)</option>
-          </select>
-
-
-          <label for="exampleRecipientInput"> Time working out: </label>
-          <input class="u-full-width" type="text" placeholder="for example: 60" id="timeInput" name="time">
-          <select class="u-full-width" id="exampleRecipientInput">
-            <option value="Option 1">Min</option>
-            <option value="Option 2">Hours</option>
-
-          </select>
-
-          <label for="exampleRecipientInput"> Hours of sleep? </label>
-          <input class="u-full-width" type="number" placeholder="for example: 8" id="sleepInput" name="sleep">
-
-          <input class="button-primary" type="submit"
-            formaction="https://4x21cafvig.execute-api.us-west-2.amazonaws.com/default/myPostRequest" formmethod="post"
-            value="Submit">
-        </form>
-
-        <!----------------------------------------------------->
-      </div>
-      <!--ended column-->
-
-      <div class="four columns" style="margin-top: 5%">
-        <h5>
-          <!-- You daily activity will show here -->
-        </h5>
-
-        <p id="output">
-
-        </p>
-        <img src="images/running-shadows.png" alt="runners" class="twelve columns">
-      </div>
-    </div>
-    <!--end second row-->
-
-
-    <!------------------------------------------------------->
-    <div>
-      <!-- started third row-->
-
-
-    </div>
-    <!--started third row-->
-
-    <!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <footer style="margin-top: 3%">
-      <ul class="test">
-        <li>Copyright 2019 &copy;</li>
-        <li><a href="privacy.html">Terms & Conditions</a></li>
-        <li>Designed by 4AwePro</li>
-      </ul>
-    </footer>
-    <!--end of footer-->
-  </div>
-  <!--    <script src= "js/script.js"> </script>-->
-</body>
-
-</html>
+    </html>
